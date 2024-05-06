@@ -53,7 +53,8 @@ class AlgoStrategy(gamelib.AlgoCore):
         game engine.
         """
         game_state = gamelib.GameState(self.config, turn_state)
-        game_state.attempt_spawn(DEMOLISHER, [24, 10], 2)
+        game_state.attempt_spawn(DEMOLISHER, [24, 10], 3)
+        game_state.attempt_spawn(INTERCEPTOR, [10, 24], 3)
         gamelib.debug_write('Performing turn {} of your custom algo strategy'.format(game_state.turn_number))
         game_state.suppress_warnings(True)  #Comment or remove this line to enable warnings.
 
